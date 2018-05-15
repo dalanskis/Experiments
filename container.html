@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Container Experiments</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="https://fonts.googleapis.com/css?family=Inknut+Antiqua" rel="stylesheet">
+    <!-- <link rel="stylesheet" type="text/css" media="screen" href="main.css" /> -->
+</head>
+<style>
+
+.body {
+    font-family: 'Inknut Antiqua', serif;
+    font-size: 16px;
+}
+.site-container {
+  margin-right: auto;
+  margin-left: auto;
+  padding-right: 15px;
+  padding-left: 15px;
+  /* for edge cases: */
+  width: 100%;
+  max-width: 100%;
+}
+
+@media (min-width: 768px) {
+  .site-container{
+    width: 750px;
+  }
+}
+
+@media (min-width: 992px) {
+  .site-container{
+    width: 970px;
+  }
+}
+
+@media (min-width: 1200px) {
+  .site-container{
+    width: 1170px;
+  }
+}
+
+.purple-bubble {
+    background-color:darkorchid;
+    opacity: 0.9;
+    border-radius: 50%;
+    height: 250px;
+    width: 250px;
+    position: relative;
+    top: 7em;
+    right: 30em;
+}
+
+.name {
+    font-size: 2em;
+    position: relative;
+    right: 9em;
+}
+
+</style>
+    <body>
+        <div class="site-container">
+            <div class="purple-bubble"></div>
+            <div class="name">XXX</div>
+            <div class="pink-bubble"></div>
+        </div>
+    </body>
+</html>
