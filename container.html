@@ -6,65 +6,63 @@
     <title>Container Experiments</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link href="https://fonts.googleapis.com/css?family=Inknut+Antiqua" rel="stylesheet">
-    <!-- <link rel="stylesheet" type="text/css" media="screen" href="main.css" /> -->
+    <link rel="stylesheet" type="text/css" media="screen" href="container.css" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/css-doodle/0.2.3/css-doodle.min.js"></script>
 </head>
 <style>
-
-.body {
-    font-family: 'Inknut Antiqua', serif;
-    font-size: 16px;
+    .css-doodle {
+        :after {
+  content: '@pick(+, *, -, #)';
+  color: @pick(#60569e, #2196f3);
 }
-.site-container {
-  margin-right: auto;
-  margin-left: auto;
-  padding-right: 15px;
-  padding-left: 15px;
-  /* for edge cases: */
-  width: 100%;
-  max-width: 100%;
-}
-
-@media (min-width: 768px) {
-  .site-container{
-    width: 750px;
-  }
-}
-
-@media (min-width: 992px) {
-  .site-container{
-    width: 970px;
-  }
-}
-
-@media (min-width: 1200px) {
-  .site-container{
-    width: 1170px;
-  }
-}
-
-.purple-bubble {
-    background-color:darkorchid;
-    opacity: 0.9;
-    border-radius: 50%;
-    height: 250px;
-    width: 250px;
-    position: relative;
-    top: 7em;
-    right: 30em;
-}
-
-.name {
-    font-size: 2em;
-    position: relative;
-    right: 9em;
-}
-
+    }
 </style>
+
     <body>
         <div class="site-container">
-            <div class="purple-bubble"></div>
-            <div class="name">XXX</div>
-            <div class="pink-bubble"></div>
+            <div class="purple-bubble">
+              <div class="name">Test One Two Three</div>
+            </div>
+            <div class="pink-bubble">
+            </div>
+            <!-- <css-doodle>
+                    :doodle {
+                        @grid: 21 / 20em 20em;
+                        overflow: hidden;
+                      }
+                    
+                      --c: @pick(
+                        #11CBD7, #C6F1E7, #FA4659
+                      );
+                    
+                      :after {
+                        content: '\@hex(@rand(0x1401, 0x141b))';
+                        font-size: 2em; 
+                        background: linear-gradient(
+                          @rand(360deg),
+                          transparent 50%, var(--c) 50%
+                        );
+                        -webkit-background-clip: text;
+                        -webkit-text-fill-color: transparent;
+                        -webkit-text-stroke: var(--c);
+                        -webkit-text-stroke-width: .5px;
+                        color: transparent;
+                      } 
+            </css-doodle> -->
+
+            <!-- randomly pick a color value -->
+            <css-doodle>
+                    :doodle {
+                        @grid: 8 / 10rem 10rem;
+                        @shape: circle;
+                        overflow: hidden;
+                      }
+                    :after {
+                        content: '@pick(+, *, -, #)';
+                        color: @pick(#60569e, #2196f3);
+                        font-size: 1.75em;
+                      }
+            </css-doodle>
         </div>
     </body>
 </html>

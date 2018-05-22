@@ -1,0 +1,23 @@
+.body {
+  font-family: 'Inknut Antiqua', serif;
+  font-size: 16px; }
+
+.site-container {
+  margin: auto;
+  padding: 0 1rem;
+  max-width: 71.25rem;
+  width: 100%; }
+
+.purple-bubble {
+  background-color: darkorchid;
+  opacity: 0.9;
+  border-radius: 50%;
+  height: 250px;
+  width: 250px;
+  top: 7em;
+  right: 30em; }
+
+.name {
+  font-size: 2em;
+  position: fixed;
+  top: 3.5em; }
